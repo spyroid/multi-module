@@ -12,8 +12,8 @@ public class SolaceConnection {
     @SneakyThrows
     public SolaceConnection(SolaceConfig solaceConfig) {
         this.solaceConfig = solaceConfig;
-        log.info("~~~> Connecting to {}", solaceConfig);
-        Thread.sleep(333);
+        log.info("~~~> Connecting to {} ...", solaceConfig);
+        Thread.sleep(678);
         log.info("~~~> Connected to {}", solaceConfig);
     }
 }
