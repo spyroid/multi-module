@@ -1,3 +1,3 @@
 rootProject.name = "multimod"
 
-include("mod-core", "app-sol")
+include("mod-core", "mod-solace", "app-solace")

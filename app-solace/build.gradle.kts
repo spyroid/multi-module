@@ -4,5 +4,6 @@ plugins {
 
 dependencies {
     api(project(":mod-core"))
+    api(project(":mod-solace"))
 }
 
