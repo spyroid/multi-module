@@ -1,8 +1,8 @@
 plugins {
 	java
-	kotlin("jvm") version "2.0.0"
-	id("org.springframework.boot") version "3.3.0" apply false
-	id("io.spring.dependency-management") version "1.1.5" apply false
+	kotlin("jvm") version "2.1.10"
+	id("org.springframework.boot") version "3.4.3" apply false
+	id("io.spring.dependency-management") version "1.1.7" apply false
 }
 
 allprojects {
