@@ -3,7 +3,8 @@ plugins {
 }
 
 dependencies {
-    api(project(":mod-core"))
-    api(project(":mod-solace"))
+    implementation(project(":starter"))
+    implementation(project(":mod-core"))
+    implementation(project(":mod-solace"))
 }
 
