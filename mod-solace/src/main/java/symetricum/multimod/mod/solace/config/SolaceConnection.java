@@ -13,7 +13,7 @@ public class SolaceConnection {
     public SolaceConnection(SolaceConfig solaceConfig) {
         this.solaceConfig = solaceConfig;
         log.info("~~~> Connecting to {} ...", solaceConfig);
-        Thread.sleep(678);
+//        Thread.sleep(678);
         log.info("~~~> Connected to {}", solaceConfig);
     }
 }

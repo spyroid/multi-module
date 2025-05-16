@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 public class StarterServiceImpl implements StarterService {
 
     public StarterServiceImpl(StarterConfig starterConfig) {
-        log.info("Creating StarterServiceImpl: {}", starterConfig);
+        log.info("Creating default StarterServiceImpl with {}", starterConfig);
     }
 }

@@ -22,9 +22,9 @@ public class StarterAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public StarterConfig starterConfig() {
-        val bean = new StarterConfig();
-        bean.name = starterProps.name == null ? "default-0" : starterProps.name + "-" + starterProps.price;
-        return bean;
+        val starterConfig = new StarterConfig();
+        starterConfig.name = starterProps.name == null ? "default-0" : starterProps.name + "-" + starterProps.price;
+        return starterConfig;
     }
 
     @Bean

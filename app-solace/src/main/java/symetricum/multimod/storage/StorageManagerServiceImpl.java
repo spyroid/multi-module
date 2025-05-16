@@ -18,15 +18,14 @@ public class StorageManagerServiceImpl implements StorageManagerService {
     public StorageManagerServiceImpl(StoragesProps storagesProps, Map<String, StorageDao> storages) {
         log.info("active: {}", storagesProps.active);
         log.info("storages: {}", storages);
-        this.activeStorage = storagesProps.active;
         this.storages = storages;
-        setActiveStorage(activeStorage);
+        setActiveStorage(storagesProps.active);
     }
 
     @Override
     public void setActiveStorage(StoragesConfig.Types activeStorage) {
         if (storages.isEmpty()) return;
-        if (activeStorage == null) activeStorage = StoragesConfig.Types.valueOf(storages.entrySet().stream().findFirst().get().getKey());
+        if (activeStorage == null) throw new IllegalArgumentException("activeStorage cannot be null");
         if (!storages.containsKey(activeStorage.name())) throw new IllegalArgumentException("Storage " + activeStorage + " not found");
         this.activeStorage = activeStorage;
         this.activeStorageDao = storages.get(activeStorage.name());
