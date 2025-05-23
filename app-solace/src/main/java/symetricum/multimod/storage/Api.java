@@ -3,12 +3,16 @@ package symetricum.multimod.storage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import symetricum.grpc.hello.proto.HelloRequest;
+import symetricum.grpc.hello.proto.SimpleGrpc;
 
 @Slf4j
 @RestController
@@ -31,5 +35,4 @@ public class Api {
         storageManagerService.setActiveStorage(StoragesConfig.Types.valueOf(active));
         return getStorages();
     }
-
 }

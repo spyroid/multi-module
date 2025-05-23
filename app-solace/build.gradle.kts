@@ -6,5 +6,6 @@ dependencies {
     implementation(project(":starter"))
     implementation(project(":mod-core"))
     implementation(project(":mod-solace"))
+    implementation(project(":orange-box-api"))
 }
 
